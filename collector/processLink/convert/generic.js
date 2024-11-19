@@ -10,6 +10,8 @@ async function scrapeGenericUrl(link, textOnly = false) {
   console.log(`-- Working URL ${link} --`);
   const content = await getPageContent(link);
 
+  // random new line to test fork / sync
+
   if (!content.length) {
     console.error(`Resulting URL content was empty at ${link}.`);
     return {
