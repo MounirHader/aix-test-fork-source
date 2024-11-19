@@ -12,6 +12,7 @@ async function scrapeGenericUrl(link, textOnly = false) {
 
   // random new line to test fork / sync
   // another new random line
+  // and yet another new random line
 
   if (!content.length) {
     console.error(`Resulting URL content was empty at ${link}.`);
