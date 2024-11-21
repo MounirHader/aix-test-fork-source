@@ -36,16 +36,6 @@ const ApiKey = {
     }
   },
 
-  delete: async function (clause = {}) {
-    try {
-      await prisma.api_keys.deleteMany({ where: clause });
-      return true;
-    } catch (error) {
-      console.error("FAILED TO DELETE API KEY.", error.message);
-      return false;
-    }
-  },
-
   where: async function (clause = {}, limit) {
     try {
       const apiKeys = await prisma.api_keys.findMany({
