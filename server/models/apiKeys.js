@@ -15,6 +15,7 @@ const ApiKey = {
         data: {
           secret: this.makeSecret(),
           createdBy: createdByUserId,
+          createdTime: new Date(),
         },
       });
 
