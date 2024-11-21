@@ -26,16 +26,6 @@ const ApiKey = {
     }
   },
 
-  get: async function (clause = {}) {
-    try {
-      const apiKey = await prisma.api_keys.findFirst({ where: clause });
-      return apiKey;
-    } catch (error) {
-      console.error("FAILED TO GET API KEY.", error.message);
-      return null;
-    }
-  },
-
   count: async function (clause = {}) {
     try {
       const count = await prisma.api_keys.count({ where: clause });
